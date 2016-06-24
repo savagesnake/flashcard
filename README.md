@@ -25,7 +25,7 @@ This release should take roughly 15 - 20 minutes.  If it's taking longer, find a
 
 
 ### Release 0: Build Following Model-View-Controller Pattern
-Once we're on the same page regarding the design of our flashcard application, it's time to build it.  We have a few example data files (e.g., `nighthawk_flashcard_data.txt`), and a user should be able to play any of these files.
+Once we're on the same page regarding the design of our flashcard application, it's time to build it.  We have a few example data files (e.g., `golden_bears_flashcard_data.txt`), and a user should be able to play any of these files.
 
 As best we can, follow the MVC design pattern.  Our implementation will likely differ from our cohort mates' implementations; that's okay.  The important thing to consider is how well we structure our code to represent the abstract concept of a design pattern.
 
