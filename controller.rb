@@ -8,9 +8,12 @@ class Controller
   end
 
   def load_game
+    commands = ARGV
+    return view.choose_deck if commands.empty?
+    return view.choose_deck if commands[0].downcase == "help"
     # this section will run an create teh deck and the cards
     # depending on the user selection
-   deck_select = view.choose_deck
+   deck_select = commands[0]
    deck_option = deck_options(deck_select)
    deck.create_cards(deck_option)
    system "cls"
@@ -21,12 +24,12 @@ class Controller
 
   def deck_options(deck_select)
     #  binding.pry
-    case deck_select
-    when "1"
+    case deck_select.downcase
+    when "nighthawk"
       "nighthawk_flashcard_data.txt"
-    when "2"
+    when "otter"
       "otter_flashcard_data.txt"
-    when "3"
+    when "raccoon"
       "raccoon_flashcard_data.txt"
     else
       view.display_error
