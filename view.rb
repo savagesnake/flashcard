@@ -14,20 +14,26 @@ class View
   end
 
  def dispay_question(card)
-    puts card.question
+    puts "\n#{card.question}"
     user_input
+
+ end
+
+ def correct
+   puts "Correct!"
+ end
+ def wrong(answer)
+   puts "The correct answer is #{answer}"
  end
 
  def game_over(score, deck_size)
-  puts "+++ Game Over  +++++++++++++"
+  puts "\n\n+++ Game Over  +++++++++++++"
   puts "  Your Score "
    puts "="*50
-   puts " You got #{score} correct out of #{deck_size.length} "
+   puts "You got #{score} correct out of #{deck_size.length}"
  end
  def display_error
    raise "Sorry something when wrong or invalid option"
  end
-
-
 
 end

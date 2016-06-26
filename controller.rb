@@ -34,10 +34,13 @@ class Controller
   end
 
   def play_game(deck)
-    deck.cards.each do  |card|
+    deck.cards.shuffle.each do  |card|
       answer = view.dispay_question(card)
-      if answer.downcase == card.answer
+      if answer.downcase == card.answer.downcase
         deck.score_calculate
+        view.correct
+      else
+        view.wrong(card.answer)
       end
     end
   end

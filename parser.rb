@@ -1,7 +1,7 @@
 module Parser
   def parser(file_name)
   headers = ["question","answer"]
-  data_info = []
+  data_info = Array.new
     File.open(file_name,"r") do |file|
        file.each_line do |line|
          if line.length > 2
